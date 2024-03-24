@@ -10,3 +10,9 @@
 
     --nav-header-height: 120px;
 }
+
+@media (max-width: 768px) {
+    :root {
+        --nav-header-height: 80px;
+    }
+}

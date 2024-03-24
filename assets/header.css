@@ -31,14 +31,17 @@
 
     .orange-line {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: var(--orange);
     }
 
     .flag-cricket {
         position: absolute;
-        left: 50%;
+        /* left: 50%;
         top: 50%; 
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%); */
         height: 90%;
     }
 }

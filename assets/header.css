@@ -1,0 +1,44 @@
+@import 'root.css';
+
+#header {
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    min-height: 250px;
+}
+
+#header-flag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .flag-line {
+        width: 100%;
+        height: 100%;
+    }
+
+    .black-line {
+        background-color: var(--black);
+    }
+
+    .red-line {
+        background-color: var(--red);
+    }
+
+    .orange-line {
+        position: relative;
+        background-color: var(--orange);
+    }
+
+    .flag-cricket {
+        position: absolute;
+        left: 50%;
+        top: 50%; 
+        transform: translate(-50%, -50%);
+        height: 90%;
+    }
+}

@@ -1,0 +1,27 @@
+@import 'root.css';
+
+
+#nav {
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid var(--grey);
+
+    #nav-wrap {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        max-width: 1920px;
+    }
+
+    .nav-item {
+        padding: 18px 32px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .nav-item:hover {
+        background-color: var(--grey);
+    }
+}

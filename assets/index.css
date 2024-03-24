@@ -1,0 +1,35 @@
+@import 'root.css';
+@import 'RethinkSans.css';
+@import 'navbar-header.css';
+@import 'navbar.css';
+@import 'header.css';
+@import 'follow-popup.css';
+
+* {
+    box-sizing: border-box;
+    font-family: 'RethinkSans', Arial, Helvetica, sans-serif;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    font-variation-settings: "wght" 700;
+}
+
+main {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}

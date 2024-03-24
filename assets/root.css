@@ -1,0 +1,12 @@
+:root {
+    --red: #ff0000;
+    --orange: #FF9900;
+    --black: #000000;
+    --text: hsl(0, 0%, 20%);
+    --secondary-text: hsl(0, 0%, 20%);
+    --grey: hsl(0, 0%, 90%);
+    --white: hsl(0, 0%, 100%);
+    --popup-background: hsl(0, 0%, 100%);
+
+    --nav-header-height: 120px;
+}

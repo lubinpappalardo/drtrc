@@ -1,0 +1,69 @@
+@import 'root.css';
+
+#nav-header {
+    /* position: fixed; */
+    position: relative;
+    z-index: 0;
+
+    width: 100%;
+    height: var(--nav-header-height);
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+
+    #nav-header-wrap {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+
+        width: 100%;
+        max-width: 1920px;
+    }
+
+    #nav-header-logo {
+        height: 90%;
+    }
+
+    #follow-us-btn {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 32px;
+
+        background: white;
+        border: 2px solid var(--black);
+        cursor: pointer;
+
+        font-size: 16px;
+        font-weight: 200;
+
+        transition-duration: 300ms;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 7px;
+            left: 7px;
+            width: 100%;
+            height: 100%;
+            background-color: var(--red);
+            transition-duration: 300ms;
+        }
+
+        &:hover {
+
+            &::before {
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+
+
+}

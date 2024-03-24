@@ -1,0 +1,161 @@
+@import 'root.css';
+
+#follow-popup {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#follow-popup.visible {
+    display: flex;
+}
+
+#follow-popup-wrap {
+    position: relative;
+    padding: 40px;
+    background-color: var(--popup-background);
+    display: flex;
+    flex-direction: column;
+    max-width: calc(100% - 40px);
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+
+    #follow-popup-close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 20px;
+        cursor: pointer;
+        transition-duration: 300ms;
+        color: var(--secondary-text);
+
+        &:hover {
+            transform: scale(1.1);
+            color: var(--red);
+        }
+    }
+
+    h1 {
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .desc {
+        color: var(--secondary-text);
+        font-style: italic;
+    }
+
+    #follow-popup-website-link {
+        margin: 30px 0px;
+        position: relative;
+        width: 100%;
+
+        input {
+            width: 100%;
+            padding: 18px 32px;
+            font-size: 18px;
+            /* border-radius: 5px; */
+            /* border: 2px solid var(--grey); */
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            right: 16px;
+            cursor: pointer;
+            transition-duration: 300ms;
+
+            &:hover {
+                /* transform: translate(0, -50%) scale(1.1); */
+                color: var(--red);
+
+                &::before {
+                    /* display: block; */
+                    opacity: 1;
+                }
+            }
+
+            &::before {
+                content: 'Copy link to clipboard';
+                font-family: 'RethinkSans', Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                background: white;
+                border: 1px solid hsl(0, 0%, 10%);
+                color: black;
+                padding: 2px 5px;
+                border-radius: 2px;
+                position: absolute;
+                left: 110%;
+                bottom: 80%;
+
+                touch-action: none;
+                /* display: none; */
+                opacity: 0;
+                transition-duration: 300ms;
+                transition-delay: 500ms;
+            }
+        }
+    }
+
+    #follow-popup-social-media {
+        display: flex;
+        /* justify-content: space-around; */
+        width: 100%;
+
+        a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            color: var(--secondary-text);
+            text-decoration: none;
+
+            cursor: pointer;
+            transition-duration: 300ms;
+
+            &:hover {
+                background-color: var(--grey);
+
+                &::before {
+                    opacity: 1;
+                }
+            }
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        a::before {
+            content: attr(data-tooltip);
+            font-family: 'RethinkSans', Arial, Helvetica, sans-serif;
+            display: inline;
+            font-size: 14px;
+            background: white;
+            border: 1px solid hsl(0, 0%, 10%);
+            color: black;
+            padding: 2px 5px;
+            border-radius: 2px;
+            position: absolute;
+            white-space: nowrap;
+            left: 110%;
+            bottom: 80%;
+
+            touch-action: none;
+            opacity: 0;
+            transition-duration: 300ms;
+            transition-delay: 500ms;
+
+        }
+    }
+}
